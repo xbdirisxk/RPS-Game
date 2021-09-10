@@ -9,22 +9,51 @@
   </head>
   <body>
     <div class="container">
-      <h1>ROCK-PAPER-SCISSORS GAME</h1>
-      <div class="buttons">
-        <button id="rock">Rock</button>
-        <button id="paper">paper</button>
-        <button id="scissors">scissors</button>
+      <div class="logo">
+        <img
+          src="images/rock-paper-scissors.svg"
+          alt="game logo"
+          id="img-logo"
+        />
+        <header>ROCK-PAPER-SCISSORS GAME</header>
       </div>
-      <p></p>
-      <div class="score">
-        <h2>SCORE</h2>
-        <h3>Player: <span id="player"></span></h3>
-        <h3>Computer: <span id="computer"></span></h3>
+      <div class="grid-container">
+        <div class="player">
+          <h2>PLAYER</h2>
+          <img src="images/rock.svg" alt="rock" id="player-img" />
+          <div class="player-options">
+            <span id="rock">ROCK</span>
+            <span id="paper">PAPER</span>
+            <span id="scissors">SCISSORS</span>
+            <!-- <img src="images/rock.svg" alt="rock" id="player-img" />
+          <div class="player-options">
+            <img src="images/rock.svg" height="10px" width="10px" id="rock" />
+            <img src="images/paper.svg" height="10px" width="10px" id="paper" />
+            <img
+              src="images/scissors.svg"
+              height="10px"
+              width="10px"
+              id="scissors"
+            /> -->
+          </div>
+        </div>
+        <div class="scores">
+          <h2>SCORES</h2>
+          <div class="win-lose">
+            <h2>⤆start the game</h2>
+          </div>
+          <div class="score-count">
+            <h3>player</h3>
+            <h3>computer</h3>
+            <span id="player-score">0</span>
+            <span id="computer-score">0</span>
+          </div>
+        </div>
+        <div class="computer">
+          <h2>COMPUTER</h2>
+          <img src="images/scissors.svg" alt="scissors" id="computer-img" />
+        </div>
       </div>
-      <div class="finish"></div>
-      <a href="/home/xbdirisxk/webdev/js/RPS-Game/index.html"
-        ><div class="unvisible">try again</div></a
-      >
     </div>
     <script src="script.js"></script>
   </body>

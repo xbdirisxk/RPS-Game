@@ -2,14 +2,24 @@ let playerScore = 0;
 let computerScore = 0;
 
 function computerPlay() {
-  let options = ["rock", "paper", "scissors"];
-  let index = Math.floor(Math.random() * 3);
+  let options = [
+    "rock",
+    "paper",
+    "scissors",
+    "rock",
+    "paper",
+    "scissors",
+    "rock",
+    "paper",
+    "scissors",
+  ];
+  let index = Math.floor(Math.random() * 9);
   return options[index];
 }
 
 function playRound(playerSelection, computerSelection) {
   let player = playerSelection.toLowerCase().trim();
-  let computer = computerSelection.toLowerCase();
+  let computer = computerSelection;
   if (player == "rock" && computer == "paper") {
     computerScore++;
     return "Lose, paper beat rock";
@@ -36,8 +46,16 @@ function playRound(playerSelection, computerSelection) {
 
 function game(playerOption) {
   let userInput = playerOption;
-  let play = playRound(userInput, computerPlay());
-  p.textContent = play;
+  let computerOption = computerPlay();
+  let play = playRound(userInput, computerOption);
+  if (computerOption == "rock")
+    computerWeapon.setAttribute("src", "images/rock.svg");
+  else if (computerOption == "paper")
+    computerWeapon.setAttribute("src", "images/paper.svg");
+  else if (computerOption == "scissors")
+    computerWeapon.setAttribute("src", "images/scissors.svg");
+
+  winLose.textContent = play;
   pScore.textContent = playerScore;
   cScore.textContent = computerScore;
 }
@@ -45,42 +63,49 @@ function game(playerOption) {
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
-const p = document.querySelector(".container p");
-const pScore = document.querySelector("h3 #player");
-const cScore = document.querySelector("h3 #computer");
-const finish = document.querySelector(".finish");
-const refreshButton = document.querySelector("a div");
+const playerWeapon = document.querySelector("#player-img");
+const computerWeapon = document.querySelector("#computer-img");
+const winLose = document.querySelector(".win-lose > h2");
+const pScore = document.querySelector("#player-score");
+const cScore = document.querySelector("#computer-score");
 
+// onclick events
 rock.addEventListener("click", () => {
   let option = "rock";
-  if (playerScore < 3 && computerScore < 3) game(option);
-  else if (playerScore >= 3) {
-    finish.textContent = "You Win 💪";
-    refreshButton.classList.add("reload-page");
+  if (playerScore < 3 && computerScore < 3) {
+    playerWeapon.setAttribute("src", "images/rock.svg");
+    game(option);
+  } else if (playerScore >= 3) {
+    // finish.textContent = "You Win 💪";
+    // refreshButton.classList.add("reload-page");
   } else if (computerScore >= 3) {
     finish.textContent = "You Lose 😟";
-    refreshButton.classList.add("reload-page");
+    // refreshButton.classList.add("reload-page");
   }
 });
 paper.addEventListener("click", () => {
   let option = "paper";
-  if (playerScore < 3 && computerScore < 3) game(option);
-  else if (playerScore >= 3) {
-    finish.textContent = "You Win 💪";
-    refreshButton.classList.add("reload-page");
+  if (playerScore < 3 && computerScore < 3) {
+    playerWeapon.setAttribute("src", "images/paper.svg");
+    game(option);
+  } else if (playerScore >= 3) {
+    // finish.textContent = "You Win 💪";
+    // refreshButton.classList.add("reload-page");
   } else if (computerScore >= 3) {
     finish.textContent = "You Lose 😟";
-    refreshButton.classList.add("reload-page");
+    // refreshButton.classList.add("reload-page");
   }
 });
 scissors.addEventListener("click", () => {
   let option = "scissors";
-  if (playerScore < 3 && computerScore < 3) game(option);
-  else if (playerScore >= 3) {
-    finish.textContent = "You Win 💪";
-    refreshButton.classList.add("reload-page");
+  if (playerScore < 3 && computerScore < 3) {
+    playerWeapon.setAttribute("src", "images/scissors.svg");
+    game(option);
+  } else if (playerScore >= 3) {
+    // finish.textContent = "You Win 💪";
+    // refreshButton.classList.add("reload-page");
   } else if (computerScore >= 3) {
     finish.textContent = "You Lose 😟";
-    refreshButton.classList.add("reload-page");
+    // refreshButton.classList.add("reload-page");
   }
 });
