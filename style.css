@@ -89,7 +89,7 @@ body {
 }
 .dev-info > a > i:hover {
   transform: rotate(1turn);
-  transition: 0.7s;
+  transition: 0.8s;
 }
 /*-------*/
 .winner {
@@ -112,4 +112,8 @@ body {
 a {
   text-decoration: none;
   color: #000;
+}
+
+.black-screen {
+  background-color: rgb(59, 59, 59);
 }

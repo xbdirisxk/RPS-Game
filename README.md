@@ -1,3 +1,3 @@
 # Rock-Paper-Scissors-Game
 
-**DEMO: `https://abdirisakhd.github.io/rps-game/`**
+**DEMO:** [abdirisakhd.github.io/RPS-Game](https://abdirisakhd.github.io/RPS-Game/)

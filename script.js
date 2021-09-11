@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-=======
-// I know it's mess, if can do better I'll be happy to see yours
+// It's mess here, so if can do better feel free to change anything
 
->>>>>>> rps-advance-ui
 let playerScore = 0;
 let computerScore = 0;
 
 function computerPlay() {
-<<<<<<< HEAD
-  let options = ["rock", "paper", "scissors"];
-  let index = Math.floor(Math.random() * 3);
-=======
   let options = [
     "rock",
     "paper",
@@ -23,17 +16,12 @@ function computerPlay() {
     "scissors",
   ];
   let index = Math.floor(Math.random() * 9);
->>>>>>> rps-advance-ui
   return options[index];
 }
 
 function playRound(playerSelection, computerSelection) {
   let player = playerSelection.toLowerCase().trim();
-<<<<<<< HEAD
-  let computer = computerSelection.toLowerCase();
-=======
   let computer = computerSelection;
->>>>>>> rps-advance-ui
   if (player == "rock" && computer == "paper") {
     computerScore++;
     return "Lose, paper beat rock";
@@ -57,21 +45,6 @@ function playRound(playerSelection, computerSelection) {
   else if (player == "scissors" && computer == "scissors") return "it's tie";
   else return "wrong input";
 }
-<<<<<<< HEAD
-
-function game() {
-  while (playerScore < 3 && computerScore < 3) {
-    let userInput = prompt("choose rock, paper or scissors:");
-    let play = playRound(userInput, computerPlay());
-
-    if (play == "wrong input") {
-      console.log("wrong input, pls choose from the above");
-      continue;
-    }
-    console.log(play);
-    console.log(`player ${playerScore}-${computerScore} computer`);
-  }
-=======
 
 function game(playerOption) {
   let userInput = playerOption;
@@ -87,7 +60,6 @@ function game(playerOption) {
   winLose.textContent = play;
   pScore.textContent = playerScore;
   cScore.textContent = computerScore;
->>>>>>> rps-advance-ui
 }
 
 const rock = document.querySelector("#rock");
@@ -102,7 +74,7 @@ const winLose = document.querySelector(".win-lose > h2");
 const pScore = document.querySelector("#player-score");
 const cScore = document.querySelector("#computer-score");
 
-const playAgain = document.querySelector(".scores > a >.unvisible");
+const playAgain = document.querySelector(".scores > a > .unvisible");
 
 // onclick events
 rock.addEventListener("click", () => {
