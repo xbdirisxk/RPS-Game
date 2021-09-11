@@ -1,3 +1,5 @@
+// I know it's mess, if can do better I'll be happy to see yours
+
 let playerScore = 0;
 let computerScore = 0;
 
@@ -63,11 +65,16 @@ function game(playerOption) {
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
+
 const playerWeapon = document.querySelector("#player-img");
 const computerWeapon = document.querySelector("#computer-img");
+
 const winLose = document.querySelector(".win-lose > h2");
+
 const pScore = document.querySelector("#player-score");
 const cScore = document.querySelector("#computer-score");
+
+const playAgain = document.querySelector(".scores > a >.unvisible");
 
 // onclick events
 rock.addEventListener("click", () => {
@@ -76,11 +83,13 @@ rock.addEventListener("click", () => {
     playerWeapon.setAttribute("src", "images/rock.svg");
     game(option);
   } else if (playerScore >= 3) {
-    // finish.textContent = "You Win 💪";
-    // refreshButton.classList.add("reload-page");
+    winLose.textContent = "You Win 💪";
+    winLose.classList.add("winner");
+    playAgain.classList.add("finished");
   } else if (computerScore >= 3) {
-    finish.textContent = "You Lose 😟";
-    // refreshButton.classList.add("reload-page");
+    winLose.textContent = "You Lose 😞";
+    winLose.classList.add("winner");
+    playAgain.classList.add("finished");
   }
 });
 paper.addEventListener("click", () => {
@@ -89,11 +98,13 @@ paper.addEventListener("click", () => {
     playerWeapon.setAttribute("src", "images/paper.svg");
     game(option);
   } else if (playerScore >= 3) {
-    // finish.textContent = "You Win 💪";
-    // refreshButton.classList.add("reload-page");
+    winLose.textContent = "You Win 💪";
+    winLose.classList.add("winner");
+    playAgain.classList.add("finished");
   } else if (computerScore >= 3) {
-    finish.textContent = "You Lose 😟";
-    // refreshButton.classList.add("reload-page");
+    winLose.textContent = "You Lose 😞";
+    winLose.classList.add("winner");
+    playAgain.classList.add("finished");
   }
 });
 scissors.addEventListener("click", () => {
@@ -102,10 +113,12 @@ scissors.addEventListener("click", () => {
     playerWeapon.setAttribute("src", "images/scissors.svg");
     game(option);
   } else if (playerScore >= 3) {
-    // finish.textContent = "You Win 💪";
-    // refreshButton.classList.add("reload-page");
+    winLose.textContent = "You Win 💪";
+    winLose.classList.add("winner");
+    playAgain.classList.add("finished");
   } else if (computerScore >= 3) {
-    finish.textContent = "You Lose 😟";
-    // refreshButton.classList.add("reload-page");
+    winLose.textContent = "You Lose 😞";
+    winLose.classList.add("winner");
+    playAgain.classList.add("finished");
   }
 });
