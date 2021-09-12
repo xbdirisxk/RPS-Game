@@ -77,7 +77,11 @@ const cScore = document.querySelector("#computer-score");
 const playAgain = document.querySelector(".scores > a > .unvisible");
 
 // onclick events
-rock.addEventListener("click", () => {
+rock.addEventListener("click", rockEvent);
+paper.addEventListener("click", paperEvent);
+scissors.addEventListener("click", scissorsEvent);
+
+function rockEvent() {
   let option = "rock";
   if (playerScore < 3 && computerScore < 3) {
     playerWeapon.setAttribute("src", "images/rock.svg");
@@ -91,8 +95,9 @@ rock.addEventListener("click", () => {
     winLose.classList.add("winner");
     playAgain.classList.add("finished");
   }
-});
-paper.addEventListener("click", () => {
+}
+
+function paperEvent() {
   let option = "paper";
   if (playerScore < 3 && computerScore < 3) {
     playerWeapon.setAttribute("src", "images/paper.svg");
@@ -106,8 +111,9 @@ paper.addEventListener("click", () => {
     winLose.classList.add("winner");
     playAgain.classList.add("finished");
   }
-});
-scissors.addEventListener("click", () => {
+}
+
+function scissorsEvent() {
   let option = "scissors";
   if (playerScore < 3 && computerScore < 3) {
     playerWeapon.setAttribute("src", "images/scissors.svg");
@@ -121,4 +127,4 @@ scissors.addEventListener("click", () => {
     winLose.classList.add("winner");
     playAgain.classList.add("finished");
   }
-});
+}
