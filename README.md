@@ -1,4 +1,4 @@
 # Rock-Paper-Scissors-Game
 for Odin-project
 ### live preview
-[abdirisakhd.github.io/RPS-Game](https://abdirisakhd.github.io/RPS-Game/)
+[github.io/RPS-Game](https://xbdirisxk.github.io/RPS-Game/)
