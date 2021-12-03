@@ -1,70 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="images/rock-paper-scissors.svg" />
-    <script
-      src="https://kit.fontawesome.com/8d183cb119.js"
-      crossorigin="anonymous"
-    ></script>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>R.P.S. Game</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="logo">
-        <img
-          src="images/rock-paper-scissors.svg"
-          alt="game logo"
-          id="img-logo"
-        />
-        <header>ROCK-PAPER-SCISSORS GAME</header>
-      </div>
-      <div class="grid-container">
-        <div class="player">
-          <h2>PLAYER</h2>
-          <img src="images/rock.svg" alt="rock" id="player-img" />
-          <p>choose from here:</p>
-          <div class="player-options">
-            <img src="images/rock.svg" height="40px" width="40px" id="rock" />
-            <img src="images/paper.svg" height="40px" width="40px" id="paper" />
-            <img
-              src="images/scissors.svg"
-              height="37px"
-              width="37px"
-              id="scissors"
-            />
-          </div>
-        </div>
-        <div class="scores">
-          <h2>SCORES</h2>
-          <div class="win-lose">
-            <h2>⤆start the game</h2>
-          </div>
-          <div class="score-count">
-            <h3>player</h3>
-            <h3>computer</h3>
-            <span id="player-score">0</span>
-            <span id="computer-score">0</span>
-          </div>
-          <a href="/home/xbdirisxk/webdev/js/RPS-Game/index.html"
-            ><span class="unvisible">PLAY AGAIN</span></a
-          >
-        </div>
-        <div class="computer">
-          <h2>COMPUTER</h2>
-          <img src="images/scissors.svg" alt="scissors" id="computer-img" />
-        </div>
-      </div>
-    </div>
-    <div class="dev-info">
-      <a href="https://github.com/xbdirisxk" target="_blank">
-        &copy2021 Abdirisak
-        <i class="fa fa-github"></i
-      ></a>
-    </div>
-    <script src="script.js"></script>
-  </body>
+	<head>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" href="images/rock-paper-scissors.svg" />
+		<script
+			src="https://kit.fontawesome.com/8d183cb119.js"
+			crossorigin="anonymous"
+		></script>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>R.P.S. Game</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="logo">
+				<img
+					src="images/rock-paper-scissors.svg"
+					alt="game logo"
+					id="img-logo"
+				/>
+				<header>ROCK-PAPER-SCISSORS GAME</header>
+			</div>
+			<div class="grid-container">
+				<div class="player">
+					<h2>PLAYER</h2>
+					<img src="images/rock.svg" alt="rock" id="player-img" />
+					<p>choose from here:</p>
+					<div class="player-options">
+						<img src="images/rock.svg" height="40px" width="40px" id="rock" />
+						<img src="images/paper.svg" height="40px" width="40px" id="paper" />
+						<img
+							src="images/scissors.svg"
+							height="37px"
+							width="37px"
+							id="scissors"
+						/>
+					</div>
+				</div>
+				<div class="scores">
+					<h2>SCORES</h2>
+					<div class="win-lose">
+						<h2>⤆start the game</h2>
+					</div>
+					<div class="score-count">
+						<h3>player</h3>
+						<h3>computer</h3>
+						<span id="player-score">0</span>
+						<span id="computer-score">0</span>
+					</div>
+					<button class="hide" onclick="location.reload()">PLAY AGAIN</button>
+				</div>
+				<div class="computer">
+					<h2>COMPUTER</h2>
+					<img src="images/scissors.svg" alt="scissors" id="computer-img" />
+				</div>
+			</div>
+		</div>
+		<div class="dev-info">
+			<a href="https://github.com/xbdirisxk" target="_blank">
+				&copy2021 Abdirisak
+				<i class="fa fa-github"></i
+			></a>
+		</div>
+		<script src="script.js"></script>
+	</body>
 </html>
